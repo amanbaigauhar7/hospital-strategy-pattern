@@ -20,6 +20,8 @@ public class Main {
         hospital.setStrategy(new ReferralAdmission());
         hospital.admit(patientName);
 
+
+
         System.out.println("\nSelector selection:");
 
         AdmissionSelector admissionSelector = new AdmissionSelector();
@@ -64,5 +66,14 @@ public class Main {
 
         department.setStrategy(selectedTreatment);
         department.treat("Dias");
+
+        System.out.println("\n=== BEFORE REFACTORING ===");
+
+        AdmissionProcessorBeforeRefactoring oldProcessor =
+                new AdmissionProcessorBeforeRefactoring();
+
+        oldProcessor.admitPatient("Aruzhan", "emergency");
+        oldProcessor.admitPatient("Dias", "referral");
+        oldProcessor.admitPatient("Ali", "regular");
     }
 }
