@@ -66,14 +66,5 @@ public class Main {
 
         department.setStrategy(selectedTreatment);
         department.treat("Dias");
-
-        System.out.println("\n=== BEFORE REFACTORING ===");
-
-        AdmissionProcessorBeforeRefactoring oldProcessor =
-                new AdmissionProcessorBeforeRefactoring();
-
-        oldProcessor.admitPatient("Aruzhan", "emergency");
-        oldProcessor.admitPatient("Dias", "referral");
-        oldProcessor.admitPatient("Ali", "regular");
     }
 }
